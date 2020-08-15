@@ -1,26 +1,13 @@
-class EventObserver {
-    constructor() {
-        this.observers = [];
-    }
-    subscribe(fn) {
-    this.observers.push(fn);
-    }
-    unsubscribe(fn) {
-        this.observers = this.observers.filter((subscriber) => subscriber !== fn);
-        }
-     broadcast(data) {
-            this.observers.forEach((subscriber) => subscriber(data));
-            }
-    }
+const readline = require('readline');
 
-    const observer = new EventObserver();
-    // let fn = () => {};
-    // observer.subscribe(fn);
-    // console.log(observer)
-    // observer.unsubscribe(fn);
-    let subscriberHasBeenCalled = false;
-    const fn = (data) => subscriberHasBeenCalled = data;
-    observer.subscribe(fn);
-    observer.broadcast(true);
-    console.log(subscriberHasBeenCalled)
-    console.log(observer)
+const rl = readline.createInterface({
+input: process.stdin,
+output: process.stdout
+});
+
+rl.question('What do you think of Node.js? ', (answer) => {
+// TODO: Log the answer in a database
+console.log(`Thank you for your valuable feedback: ${answer}`);
+
+rl.close();
+});
