@@ -54,10 +54,12 @@ class Observer {
     update(change) {
         switch (change) {
             case 'LND':
-                console.log(`💬 Notification: The book '${this.book_title}' has been Borrowed`)
+                return (`💬 Notification: The book '${this.book_title}' has been Borrowed`)
                 break;
+            case 'RT':
+                return (`💬 Notification: The book '${this.book_title}' has been Returned back.`)
             default:
-                console.log(`💬 Notification: The book '${this.book_title}' has been Added to the Store`)
+                return (`💬 Notification: The book '${this.book_title}' has been Added to the Store`)
                 break;
         }
     }
@@ -78,3 +80,11 @@ pseudoBookShop.burrow(strangeBird)
 pseudoBookShop.notifier('LND')
 pseudoBookShop.return(strangeBird)
 pseudoBookShop.notifier('RTN');
+
+const bookStore = BookLender
+const book = Observer
+
+module.exports = {
+    bookStore,
+    book
+};

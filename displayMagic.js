@@ -1,4 +1,4 @@
-const  displayBookStore = (available_books,burrowed_books)=> {
+const displayBookStore = (available_books, burrowed_books) => {
     console.log(`
     ██████████████████████████████
     ╬BOOKS   STORE               ╬
@@ -26,7 +26,7 @@ const  displayBookStore = (available_books,burrowed_books)=> {
     `)
 }
 const welcomeMessage = () => {
-    console.log(`
+    return (`
 
     ◢◤███████████████████████████████████
     ████████████████████████████████████
