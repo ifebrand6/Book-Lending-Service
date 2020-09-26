@@ -69,12 +69,12 @@ let octupusJujuMan = new Observer("Octopus juju man by the thinking man");
 welcomeMessage()
 
 // USE CASE
-const test1 = new BookLender()
-test1.add(cleanCode)
-test1.add(strangeBird)
-test1.add(octupusJujuMan)
-test1.notifier()
-test1.burrow(strangeBird)
-test1.notifier('LND')
-test1.return(strangeBird)
-test1.notifier('RTN')
+const pseudoBookShop = new BookLender()
+pseudoBookShop.add(cleanCode)
+pseudoBookShop.add(strangeBird)
+pseudoBookShop.add(octupusJujuMan)
+pseudoBookShop.notifier()
+pseudoBookShop.burrow(strangeBird)
+pseudoBookShop.notifier('LND')
+pseudoBookShop.return(strangeBird)
+pseudoBookShop.notifier('RTN');
